@@ -1,0 +1,9 @@
+{
+  "require": {
+    "aura/sql": "^5.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "ext-openssl": "*"
+  }
+}

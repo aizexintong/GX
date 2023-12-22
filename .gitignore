@@ -1,0 +1,23 @@
+# 忽略所有 .idea 目录下的内容
+.idea/
+
+# 忽略所有 .vscode 目录下的内容
+.vscode/
+
+# 忽略所有 vendor 相关目录
+**/vendor/
+
+# 忽略所有 tmp 相关目录
+**/tmp/
+
+# 忽略所有以 .db 或 .DB 结尾的文件
+*.[dD][bB]
+
+# 忽略所有以 .bat 结尾的文件
+*.bat
+
+# 忽略所有以 .ini 结尾的文件
+*.ini
+
+# 忽略所有以 .lock 结尾的文件
+*.lock

@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(#fcc1c7, #d4e6b5) fixed;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    height: 20vh;
+    width: 100vw;
+    background-color: transparent;
+}
+
+#index_header {
+    height: 10vh;
+    width: 85vw;
+    padding: 0.5vh 3vw;
+    border-radius: 6vh;
+    background: linear-gradient(rgb(220, 220, 220), rgb(233, 231, 222));
+    position: relative;
+    transform: translateX(-50%) translateY(-50%);
+    top: 60%;
+    left: 50%;
+}
+
+.content {
+    width: 70vw;
+    margin-top: 5vh;
+    border-radius: 6vh;
+    border: 0.15vw solid #7C8A6DFF;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto auto;
+}
+
+.content_div_2 {
+    margin-top: 3vh;
+    border-radius: 2vh;
+    overflow: auto;
+}
+
+.content_div_2::-webkit-scrollbar {
+    display: none;
+}
+
+.content_div_1 {
+    margin-top: auto;
+    border-radius: 2vh;
+    padding: 0.5vh 0.5vw;
+    width: 90%;
+}
+
+.content_div_1_unfold,
+.content_div_1_merge {
+    height: 20vh;
+    border: 0.35vw solid #EAEADEFF;
+}
+
+.content_div_1_merge {
+    height: 5vh;
+    border: 0.10vh solid #E5E5D9FF;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: auto auto;
+}
+
+.content_list {
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    white-space: nowrap;
+    border-radius: 25vh;
+    width: 75vw;
+}
+
+.content_list_a {
+    text-align: center;
+    text-decoration: none;
+    color: #7b8c6a;
+    margin: 2vh;
+    border-radius: 25vh;
+    background: linear-gradient(to right, #FDDFD4FF, #DCDCDCFF);
+}
+
+.content_list::-webkit-scrollbar {
+    height: 0.8vh;
+}
+
+.content_list::-webkit-scrollbar-thumb {
+    border-radius: 25vh;
+    background: linear-gradient(to right, #dcdcdc, #d4e6b5, #dcdcdc);
+}
+
+.content_content_item {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.content_list_content {
+    max-height: 180px;
+    margin: 15px 5px 0 5px;
+    padding: 2.5%;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.parent-container {
+    overflow: hidden;
+}
+
+.scrollable-container {
+    white-space: nowrap;
+    animation: scrollText 20s linear infinite;
+}
+
+.scrollable-container-special {
+    width: auto;
+    height: auto;
+    margin: auto;
+    text-align: left;
+}
+
+@media (min-width: 1301px) {
+    .content_content {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .content_1 {
+        height: 10vh;
+    }
+
+    .content_2 {
+        height: 110vh;
+    }
+
+    .content_div_2 {
+        padding: 2vh 2vw;
+        width: 64vw;
+        height: 79vh;
+        border: 0.3vw solid #939f8e;
+    }
+}
+
+@media (min-width: 1021px) and (max-width: 1300px) {
+    .content_content {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .content_1 {
+        height: 9vh;
+    }
+
+    .content_2 {
+        height: 100vh;
+    }
+
+    .content_div_2 {
+        padding: 2vh 2vw;
+        width: 64vw;
+        height: 69vh;
+        border: 0.3vw solid #939f8e;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 1020px) {
+    .content_content {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .content_1 {
+        height: 8vh;
+    }
+
+    .content_2 {
+        height: 90vh;
+    }
+
+    .content_div_2 {
+        padding: 2vh 2vw;
+        width: 64vw;
+        height: 59vh;
+        border: 0.3vw solid #939f8e;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 720px) {
+    .content_content {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .content_1 {
+        height: 7vh;
+    }
+
+    .content_2 {
+        height: 80vh;
+    }
+
+    .content_div_2 {
+        padding: 2vh 2vw;
+        width: 64vw;
+        height: 49vh;
+        border: 0.3vw solid #939f8e;
+    }
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
