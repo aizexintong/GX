@@ -1,0 +1,42 @@
+site_name: 故乡
+site_author: aizexintong
+site_description: 故乡-文档
+site_url: https://github.com/aizexintong/GX
+copyright: GX © 2023 aizexintong
+
+nav:
+- 主页: index.md
+- 参数文档:
+    - 重要参数: Key/Parameters.md
+    - 常规参数: Key/Routine.md
+
+theme:
+  name: dracula
+  language: 'ZH'
+  logo: assets/img/dracula.png
+  favicon: assets/img/favicon.ico
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - meta
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.arithmatex
+  - pymdownx.magiclink
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - codehilite:
+      guess_lang: false
+      linenums: true
+
+plugins:
+  - search
