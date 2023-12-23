@@ -24,5 +24,7 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material
-      - run: pip install pymdown-extensions  # 安装额外的 Markdown 扩展
+      - run: pip install pymdown-extensions
+      - name: Check files in directory
+        run: ls -la  # 显示当前目录下的文件列表
       - run: mkdocs gh-deploy --force
