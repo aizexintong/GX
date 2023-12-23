@@ -21,6 +21,8 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: cd wiki  # 进入到 'wiki' 目录
       - run: pip install mkdocs mkdocs-material pymdown-extensions mkdocs-dracula-theme  # 安装所需的依赖
-      - run: mkdocs gh-deploy --force  # 在 'wiki' 目录下执行部署命令
+      - run: |
+          cd wiki
+          mkdocs gh-deploy --force
+
