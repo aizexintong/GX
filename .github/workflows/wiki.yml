@@ -12,22 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - uses: actions/setup-python@v2  # 更新为使用 v2 版本的 Python
         with:
           python-version: 3.x
-          architecture: "x64"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          cache-dependency-path: .cache
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-          architecture: "x64"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          cache: "npm"
-
+      # 进入到 'wiki' 目录，安装依赖并部署
       - name: Install dependencies and deploy
         run: |
           cd wiki  # 进入到 'wiki' 目录
