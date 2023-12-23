@@ -25,6 +25,7 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material
       - run: pip install pymdown-extensions
+      - run: pip install mkdocs-dracula-theme  # 安装 Dracula 主题
       - name: Change directory to 'wiki' and deploy
         run: |
           cd wiki  # 进入到 'wiki' 目录
