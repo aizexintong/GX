@@ -11,17 +11,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - name: Set up Node.js 16.x
+          architecture: "x64"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          cache-dependency-path: .cache
+
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: "16"
+          architecture: "x64"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          cache: "npm"
+
       - name: Install dependencies and deploy
         run: |
-          cd wiki  # 进入 'wiki' 目录
-          pip install mkdocs mkdocs-material pymdown-extensions mkdocs-dracula-theme  # 安装所需的 Python 依赖
-          npm install  # 或者 yarn install，根据你的项目使用的包管理器
-          npx mkdocs gh-deploy --force  # 在 'wiki' 目录下执行部署命令
+          cd wiki  # 进入到 'wiki' 目录
+          pip install mkdocs mkdocs-material pymdown-extensions mkdocs-dracula-theme  # 安装所需的依赖
+          mkdocs gh-deploy --force  # 在 'wiki' 目录下执行部署命令
