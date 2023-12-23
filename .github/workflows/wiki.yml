@@ -25,6 +25,7 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material
       - run: pip install pymdown-extensions
-      - name: Check files in directory
-        run: ls -la  # 显示当前目录下的文件列表
-      - run: mkdocs gh-deploy --force
+      - name: Change directory to 'wiki' and deploy
+        run: |
+          cd wiki  # 进入到 'wiki' 目录
+          mkdocs gh-deploy --force  # 在 'wiki' 目录下执行部署命令
