@@ -22,5 +22,5 @@
 # 忽略所有以 .lock 结尾的文件
 *.lock
 
-# 忽略 mkdocs 配置
-生成文件/
+# 忽略 mkdocs 生成文件
+site/
