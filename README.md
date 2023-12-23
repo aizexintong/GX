@@ -1,20 +1,19 @@
 # **故乡**
 
-##### 故乡是一个简易的视频分享搭建平台，旨在提供安全可靠的视频分享服务。我们基于 PHP 8.1-8.2 开发了这个项目，并采用了多个开源工具和库来提升安全性和用户体验。
+故乡是一个简易的视频分享搭建平台，旨在提供安全可靠的视频分享服务。我们基于 PHP 8.1-8.2 开发了这个项目，并采用了多个开源工具和库来提升安全性和用户体验。
 
 ### 技术栈
 
 1. **AList**（[GitHub 地址](https://github.com/alist-org/alist)）
-   - AList 是一个支持多种存储的文件列表程序，为我们提供了高效的后台交互能力。
-
+   - `AList` 是一个支持多种存储的文件列表程序，为我们提供了高效的后台交互能力。
 2. **GoogleAuthenticator**（[GitHub 地址](https://github.com/PHPGangsta/GoogleAuthenticator)）
-   - Google Authenticator 是一个用于与 Google Authenticator 移动应用进行交互的 PHP 类，实现了基于[RFC6238](https://tools.ietf.org/html/rfc6238)的 2 因素身份验证。
-
+   - `Google Authenticator` 是一个用于与 `Google Authenticator` 移动应用进行交互的 `PHP` 类，实现了基于[RFC6238](https://tools.ietf.org/html/rfc6238)的 2 因素身份验证。
 3. **Aura/Sql**（[GitHub 地址](https://github.com/auraphp/Aura.Sql)）
-   - Aura.Sql 是一个强大的 SQL 查询构建库，为我们提供了可靠的数据库操作支持。
-
+   - `Aura.Sql` 是一个强大的 `SQL` 查询构建库，为我们提供了可靠的数据库操作支持。
 4. **Bootstrap**（[GitHub 地址](https://github.com/twbs/bootstrap)）
-   - Bootstrap 是一个流行的前端框架，用于构建现代化的用户界面，提升了平台的用户体验和界面设计。
+   - `Bootstrap` 是一个流行的前端框架，用于构建现代化的用户界面，提升了平台的用户体验和界面设计。
+5. **ArtPlayer**（[GitHub 地址](https://github.com/zhw2590582/ArtPlayer)）
+   - `ArtPlayer` 是一个视频播放器，已经内置到项目当中。（我们已经预留了一些设置，详细信息请查看官方文档）
 
 ### 项目拉取及使用建议
 
@@ -32,5 +31,3 @@
 ### 许可协议
 
 我们的项目采用了 GPL-3.0 许可协议。请在使用或修改该项目时遵循相应的协议规定。
-
-希望这份优化后的介绍更贴合规范和清晰地呈现了项目的概况，同时包含了许可协议的说明。如有任何问题或进一步需要，欢迎随时提问。
