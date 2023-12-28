@@ -26,6 +26,7 @@
 - **PicturePrestore**: [填写图片预设]
 - **Picture**: [填写图片链接]
 
-### 加密
+### 杂项
 
 - **Key**: [填写加密字符串]
+- **expandFirstElement**：[第一顺序变量]
