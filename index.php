@@ -31,7 +31,7 @@ if (file_exists(__GX_CONFIG_DIR__)) {
 
             require_once __GX_PUBLIC_HEAD_DIR__;
 
-            if ($impasse == "") {
+            if ($impasse == "" || $impasse == "index.php" || $impasse == "index") {
                 // 文件存在，进入主页
                 PublicHead($impasse);
                 require_once __GX_HOME_DIR__;
@@ -61,7 +61,7 @@ $endTime = microtime(true);
 $executionTimeInMilliseconds = round(($endTime - $startTime) * 1000, 2); // 将秒转换为毫秒并四舍五入到4位小数
 
 // 输出页面底部信息
-echo "<div style='margin: 10vh;padding: 10vh;text-align: center;'>\n";
+echo "<div id='Bottom_information'>\n";
 echo "        <h3>本次运行时间：$executionTimeInMilliseconds 毫秒</h3>\n";
 echo "<br><br>\n";
 echo "        <h4>您的访问IP：$ip</h4>\n";

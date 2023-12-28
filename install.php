@@ -33,7 +33,7 @@ function config($SQL): void
                 'AlistUrl', 'AlistUsername', 'AlistPassword', 'Alist2FACode', 'AlistFrequently',
                 'AlistSharePrefix', 'Key', 'OriginalBigClass', 'OriginalLittleClass', 'UltimatelyLen',
                 'UnwantedElements', 'TimeFirstSort', 'MainModuleDisplay', 'IntroducePrestore', 'Introduce',
-                'PicturePrestore', 'Picture'
+                'PicturePrestore', 'Picture', 'expandFirstElement'
             ];
 
             foreach ($valuesToCheck as $value) {
@@ -300,6 +300,14 @@ function SqlInstall($SQL, $configItems): void
                     <label for=" . $configItems[16]["name"] . ">图片统一名称：</label>
                     <input type=\"text\" name=" . $configItems[16]["name"] . " id=" . $configItems[16]["name"] . " class=\"form-control\" placeholder=" . $configItems[16]["name"] . ">  
                     <small class=\"form-text text-muted\">自己设置，例如：picture.jpg</small>            
+                </div>
+                <div class=\"form-group\">
+                    <label for=" . $configItems[17]["name"] . ">是否开第一顺序自动展开：</label>
+                    <select name=" . $configItems[17]["name"] . " id=" . $configItems[17]["name"] . "  class=\"form-control\">
+                        <option value=\"False\">False</option>
+                        <option value=\"True\">True</option>
+                    </select>
+                    <small class=\"form-text text-muted\">展开首页的第一个列表，方便查看，默认不开启！</small>      
                 </div>
                     <input style=\"margin-top: 2%\" type=\"submit\" value=\"提交\" class=\"btn btn-danger\"/>
             </form>

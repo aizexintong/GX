@@ -214,7 +214,7 @@ function PreprocessingHomeInformation(): void
         $lists = contentsList($path, intval($_SESSION["__GX_UltimatelyLen_DIR__"]));
 
         echo '
-    <div class="content content_1" ' . ($index === 0 ? 'style="margin-top: 5vh;"' : '') . '>
+    <div class="content content_1" ' . ($index === 0 ? 'id="Begin_column"' : '') . '>
         <div class="content_div_1 content_div_1_merge" onclick="toggleContentDiv2(this)">
             <h2 class="content_title">' . $DateList . '</h2>
             <h6 class="content_text">点击打开' . $DateList . '列表</h6>
@@ -249,4 +249,4 @@ MenuModule();
 
 PreprocessingHomeInformation();
 
-echo "<script>expandFirstElement(false)</script></body>";
+echo "<script>expandFirstElement('{$_SESSION['__GX_expandFirstElement_DIR__']}')</script></body>";

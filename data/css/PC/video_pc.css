@@ -1,0 +1,103 @@
+/* 重置样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#f6a5ae, #c9e4af) fixed; /* 调整渐变颜色 */
+    display: grid;
+}
+
+/* 滚动条 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* 主容器 */
+.container {
+    background: linear-gradient(#8cc197, #ffe7ae);
+    margin: 20px auto;
+    display: grid;
+    width: 75vw;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid #b1abab;
+}
+
+/* 视频区域 */
+.video-section {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 79.5% 1% 19.5%;
+    margin-bottom: 2%;
+}
+
+/* 视频框架 */
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+/* 剧集信息 */
+.episode-info {
+    padding: 0 10px;
+    text-align: center;
+    overflow: auto; /* 如果内容超过最大高度，则启用垂直滚动条 */
+    border: 3px solid #eaeade;
+    border-radius: 25px;
+}
+
+.episode-info::-webkit-scrollbar {
+    display: none;
+}
+
+h2 {
+    color: #2c3e50; /* 加深标题颜色 */
+    margin-top: 20px;
+}
+
+p {
+    text-indent: 2em; /* 设置首行缩进为两个空格的宽度 */
+    line-height: 1.6;
+    color: #666;
+}
+
+/* 剧集信息链接样式 */
+.episode-info a {
+    display: block; /* 将每个项目设为块级元素 */
+    margin: 20% auto;
+    text-decoration: none; /* 可选：去除链接的下划线 */
+    color: #666; /* 可选：设置文本颜色 */
+}
+
+/* 相关视频区域 */
+.related-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* 相关视频单元 */
+.related-video {
+    flex: 0 1 calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #ddd; /* 边框颜色与容器一致 */
+    border-radius: 8px;
+}
+
+/* 底部信息 */
+#Bottom_information {
+    margin: 10vh;
+    padding: 10vh;
+    text-align: center;
+}
+
+#Begin_column {
+    margin-top: 5vh;
+}

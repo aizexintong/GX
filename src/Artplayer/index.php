@@ -145,7 +145,7 @@ $video_type = $matches[0];
         mutex: true,
         backdrop: true,
         fullscreen: true,
-        fullscreenWeb: true,
+        fullscreenWeb: false,
         subtitleOffset: true,
         miniProgressBar: true,
         playsInline: true,
