@@ -32,11 +32,19 @@ function MainClassification(): void
         // 定义要删除的不需要的元素
         $unwantedElements = explode(',', $_SESSION["__GX_UnwantedElements_DIR__"]);
 
-        // 使用 array_diff() 函数获取两个数组的差集
-        $cleanedArray = array_diff($DirtyData, $unwantedElements);
+        // 循环检查并删除在 $DirtyData 中元素包含不需要的元素内容的情况
+        foreach ($DirtyData as $index => $data) {
+            foreach ($unwantedElements as $unwanted) {
+                // 如果当前元素包含了不需要的内容，则删除该元素
+                if (strpos($data, $unwanted) !== false) {
+                    unset($DirtyData[$index]);
+                    break; // 跳出内部循环，继续下一个元素
+                }
+            }
+        }
 
         // 重新索引数组键值，可以使用 array_values()
-        $cleanedArray = array_values($cleanedArray);
+        $cleanedArray = array_values($DirtyData);
 
         // 将常量标记为已定义
         $_SESSION["__GX_BigList_DIR__"] = $cleanedArray;
