@@ -1,9 +1,9 @@
 <?php
 /**
  * @param $path //任何存在的路径
- * @return array|string|void //返回出此路径下所有需要发文件名称和文件性质
+ * @return array //返回出此路径下所有需要发文件名称和文件性质
  */
-function FetchDirectoryContents($path)
+function FetchDirectoryContents($path): array
 {
     $curl = curl_init();
 
@@ -49,7 +49,7 @@ function FetchDirectoryContents($path)
                 ];
             }
         } else {
-            return "no";
+            return ["no"];
         }
 
         // 自定义排序顺序列表
@@ -96,7 +96,7 @@ function GetDeepestPaths($path, $currentDepth, $maxDepth): array
 {
     $result = FetchDirectoryContents($path);
 
-    if ($result == "no") {
+    if ($result[0] == "no") {
         return ["no"];
     } else {
         $deepestPath = [];
@@ -110,12 +110,17 @@ function GetDeepestPaths($path, $currentDepth, $maxDepth): array
                     // 递归调用获取子文件夹的最深路径
                     $subPaths = GetDeepestPaths($path . $item['name'] . "/", $currentDepth + 1, $maxDepth);
                     // 处理递归结果
-                    if ($subPaths[0] != "no" && !empty($subPaths)) {
-                        foreach ($subPaths as $subPath) {
-                            $deepestPath[] = $item['name'] . "/" . $subPath;
+                    if (!empty($subPaths)) {
+                        if ($subPaths[0] != "no") {
+                            foreach ($subPaths as $subPath) {
+                                $deepestPath[] = $item['name'] . "/" . $subPath;
+                            }
+                        } else {
+                            // 处理没有更深层次的情况
+                            $deepestPath[] = $item['name'];
                         }
                     } else {
-                        // 如果递归结果为空，直接将当前文件夹加入结果
+                        // 处理空数组的情况
                         $deepestPath[] = $item['name'];
                     }
                 }
