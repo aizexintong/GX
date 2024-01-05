@@ -77,9 +77,11 @@ function MenuModule(?int $n = -1): void
     }
 }
 
-function MainMenu(): void
+function MainMenu($DateList): void
 {
-    echo "暂未添加，预留位置";
+    echo "
+    <div style='margin: 4%; display: flex; font-size: 200%; justify-content: center; font-weight: bold;'>$DateList 分类</div>
+    ";
 }
 
 /**
@@ -221,7 +223,7 @@ function PreprocessingHomeInformation(): void
             <div class="content_content_title" style="display: none;">';
 
         // 调用MainMenu函数
-        MainMenu();
+        MainMenu($DateList);
 
         echo '
             </div>

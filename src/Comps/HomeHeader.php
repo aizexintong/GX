@@ -1,7 +1,7 @@
 <header>
     <div id="index_header">
         <div>
-            <p>搜索功能预留框</p>
+            <input type="search" id="mySearch" name="search" placeholder="在此输入搜索内容">
         </div>
     </div>
 </header>

@@ -28,13 +28,34 @@ header {
 #index_header {
     height: 10vh;
     width: 85vw;
-    padding: 0.5vh 3vw;
-    border-radius: 6vh;
-    background: linear-gradient(rgb(220, 220, 220), rgb(233, 231, 222));
     position: relative;
     transform: translateX(-50%) translateY(-50%);
     top: 60%;
     left: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#index_header div{
+    width: 100%;
+    height: 100%;
+}
+
+/* 搜索框样式 */
+#mySearch {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 6vh;
+    background: linear-gradient(rgb(220, 220, 220), rgb(233, 231, 222));
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+/* 搜索框 placeholder 样式 */
+#mySearch::placeholder {
+    color: #999;
 }
 
 /* 内容 */
